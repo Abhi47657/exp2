@@ -1,0 +1,143 @@
+gajji@ABHIRAM MINGW64 ~
+$ cd d:
+
+gajji@ABHIRAM MINGW64 /d
+$ cd git/
+
+gajji@ABHIRAM MINGW64 /d/git
+$ git clone https://github.com/Abhi47657/lab2.git
+Cloning into 'lab2'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (9/9), done.
+Resolving deltas: 100% (1/1), done.
+
+gajji@ABHIRAM MINGW64 /d/git
+$ cd lab2/
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ ls
+README.md  file1.txt  file2.txt
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ cat file1.txt
+file first
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ cat >> file1.txt
+hello rakesh how is chinnu?
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ cat file1.txt
+file first
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ cat >>file1.txt
+
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ cat >>file1.txt
+hello rakesh how is chinnu?
+
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ cat file1.txt
+file first
+hello rakesh how is chinnu?
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git add file1.txt
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file1.txt
+
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git commit -m 'mycommit'
+[main 3549f7d] mycommit
+ 1 file changed, 1 insertion(+)
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git push orgin main
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git remote add orgin 'https://github.com/Abhi47657/lab2.git'
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git push orgin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 341 bytes | 113.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Abhi47657/lab2.git
+   56c6b4e..3549f7d  main -> main
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git push orgin main
+To https://github.com/Abhi47657/lab2.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Abhi47657/lab2.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git pull orgin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 947 bytes | 105.00 KiB/s, done.
+From https://github.com/Abhi47657/lab2
+ * branch            main       -> FETCH_HEAD
+   3549f7d..aeb8adc  main       -> orgin/main
+Updating 3549f7d..aeb8adc
+Fast-forward
+ file3.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3.txt
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$ git push orgin main
+Everything up-to-date
+
+gajji@ABHIRAM MINGW64 /d/git/lab2 (main)
+$
